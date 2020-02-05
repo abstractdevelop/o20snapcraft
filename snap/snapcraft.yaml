@@ -1,0 +1,69 @@
+---
+name: office20
+version: "20.1.04"
+summary: "The free and open source Office365 clone for Linux"
+description: "A modern office suite built with Qt5, KDE, SnapCraft, and GitLab."
+grade: stable
+confinement: strict
+base: core18
+architectures:
+  - amd64
+
+apps:
+    word:
+        command: kf5-launch $SNAP/usr/bin/word64.run
+        common-id: org.gitlab.o20.word.desktop
+        desktop: usr/share/applications/io.gitlab.o20.word.desktop
+        plugs:
+            - browser-support
+            - desktop
+            - desktop-legacy
+            - home
+              # - kde-frameworks-5-plug ???
+            - pulseaudio
+            - network
+            - opengl
+            - unity7
+            - x11
+
+plugs:
+    kde-frameworks-5-plug:
+        interface: content
+        content: kde-frameworks-5-core18-all 
+        default-provider: kde-frameworks-5-core18
+        target: kf5
+
+parts:
+    o20base:
+        plugin: cmake
+        source-type: git
+        source: https://gitlab.com/abstractsoftware/o20/o20coreapps.git
+
+        build-packages: 
+            - build-essential
+            - libegl1-mesa-dev
+            - sonnet-plugins
+
+        build-snaps: 
+            - kde-frameworks-5-core18-sdk/latest/candidate
+
+        stage-packages:
+            - flite
+            - hunspell-en-us
+            - pandoc
+
+        configflags:
+            - "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+            - "-DCMAKE_INSTALL_PREFIX=/usr"
+            - "-DCMAKE_BUILD_TYPE=Release"
+            - "-DENABLE_TESTING=OFF"
+            - "-DBUILD_TESTING=OFF"
+            - "-DKDE_SKIP_TEST_SETTINGS=ON"
+
+        override-pull: |
+            snapcraftctl pull
+            sed -i.bak -e 's|Icon=io.gitlab.o20.word|Icon=/usr/share/icons/hicolor/scalable/apps/io.gitlab.o20.word.svg|g' dev/o20.word/io.gitlab.o20.word.desktop
+
+    kde-frameworks-5-env:
+        plugin: dump
+        source: https://github.com/apachelogger/kf5-snap-env.git
