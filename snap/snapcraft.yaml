@@ -1,6 +1,6 @@
 ---
 name: office20
-version: "20.1.04"
+version: "20.2.0"
 summary: "The free and open source Office365 clone for Linux"
 description: "A modern office suite built with Qt5, KDE, SnapCraft, and GitLab."
 grade: stable
