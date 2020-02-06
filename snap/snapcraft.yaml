@@ -39,7 +39,7 @@ parts:
         source-type: git
         source: https://gitlab.com/abstractsoftware/o20/o20coreapps.git
         source-tag: "20.2.0.1"
-        source-commit: "eb450c81ba081358e89ac9bbf1ad4fab82ccbbe6"
+        #source-commit: "eb450c81ba081358e89ac9bbf1ad4fab82ccbbe6"
 
         build-packages: 
             - build-essential
