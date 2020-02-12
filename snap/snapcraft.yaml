@@ -19,7 +19,7 @@ apps:
             - desktop
             - desktop-legacy
             - home
-              # - kde-frameworks-5-plug ???
+            - kde-frameworks-5-plug
             - pulseaudio
             - network
             - opengl
@@ -46,7 +46,7 @@ parts:
             - sonnet-plugins
 
         build-snaps: 
-            - kde-frameworks-5-core18-sdk/latest/candidate
+            - kde-frameworks-5-core18-sdk
 
         stage-packages:
             - flite
