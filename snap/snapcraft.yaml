@@ -37,7 +37,7 @@ parts:
         plugin: cmake
         source-type: git
         source: https://gitlab.com/abstractsoftware/o20/o20coreapps.git
-        source-commit: "c0733fd6e6fc5d979ca326b6138e7db4ba0f0ae0"
+        source-commit: "a8e0c211eb718ad19ac1d9ba754fef4482d0b779"
 
         build-packages: 
             - build-essential
