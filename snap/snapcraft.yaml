@@ -11,7 +11,7 @@ architectures:
 
 apps:
     word:
-        command: kf5-launch $SNAP/usr/bin/word64.run
+        command: kf5-launch $SNAP/usr/bin/o20.word
         common-id: org.gitlab.o20.word.desktop
         desktop: usr/share/applications/io.gitlab.o20.word.desktop
         plugs:
