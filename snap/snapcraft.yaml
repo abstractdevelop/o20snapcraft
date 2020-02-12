@@ -21,7 +21,6 @@ apps:
             - home
             - kde-frameworks-5-plug
             - pulseaudio
-            - network
             - opengl
             - unity7
             - x11
