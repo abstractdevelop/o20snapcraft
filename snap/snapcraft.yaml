@@ -62,7 +62,7 @@ parts:
 
         override-pull: |
             snapcraftctl pull
-            sed -i.bak -e 's|Icon=io.gitlab.o20.word|Icon=/usr/share/icons/hicolor/scalable/apps/io.gitlab.o20.word.png|g' dev/o20.word/io.gitlab.o20.word.desktop
+            sed -i.bak -e 's|Icon=io.gitlab.o20.word|Icon=/usr/share/icons/hicolor/scalable/apps/io.gitlab.o20.word.png|g' src/app/io.gitlab.o20.word.desktop
 
     kde-frameworks-5-env:
         plugin: dump
