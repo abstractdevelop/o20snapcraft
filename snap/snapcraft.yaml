@@ -1,7 +1,7 @@
 ---
 name: office20
-version: "20.2.4"
-summary: "The free and open source Office365 clone for Linux"
+version: "3.0"
+summary: "Free and open source office suite for Linux with O365 UX and Google Material controls."
 description: "A modern office suite built with Qt5, KDE, SnapCraft, and GitLab."
 grade: stable
 confinement: strict
@@ -10,8 +10,8 @@ architectures:
   - amd64
 
 apps:
-    word:
-        command: kf5-launch $SNAP/usr/bin/o20.word
+    ink:
+        command: kf5-launch $SNAP/usr/bin/o20 app:ink
         common-id: org.gitlab.o20.word.desktop
         desktop: usr/share/applications/io.gitlab.o20.word.desktop
         plugs:
