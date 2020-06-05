@@ -38,6 +38,7 @@ parts:
         source-type: git
         source: https://gitlab.com/abstractsoftware/o20/o20coreapps.git
         source-commit: "b129b74c79743dc5c7707a0efc52d0925281fcc7"
+        source-branch: qtquick-dev
 
         build-packages: 
             - build-essential
@@ -62,7 +63,7 @@ parts:
 
         override-pull: |
             snapcraftctl pull
-            sed -i.bak -e 's|Icon=io.gitlab.o20.word|Icon=/usr/share/icons/hicolor/scalable/apps/io.gitlab.o20.word.svg|g' dev/o20.word/io.gitlab.o20.word.desktop
+            sed -i.bak -e 's|Icon=io.gitlab.o20.word|Icon=/usr/share/icons/hicolor/scalable/apps/io.gitlab.o20.word.png|g' dev/o20.word/io.gitlab.o20.word.desktop
 
     kde-frameworks-5-env:
         plugin: dump
