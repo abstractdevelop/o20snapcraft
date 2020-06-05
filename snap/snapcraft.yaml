@@ -1,7 +1,7 @@
 ---
 name: office20
 version: "3.0"
-summary: "Free and open source office suite for Linux with O365 UX and Google Material controls."
+summary: "Free and open source office suite for Linux with O365 UX."
 description: "A modern office suite built with Qt5, KDE, SnapCraft, and GitLab."
 grade: stable
 confinement: strict
